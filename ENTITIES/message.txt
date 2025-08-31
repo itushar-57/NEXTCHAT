@@ -1,0 +1,42 @@
+{
+  "name": "Message",
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "string",
+      "description": "Message content"
+    },
+    "channel_id": {
+      "type": "string",
+      "description": "ID of the channel this message belongs to"
+    },
+    "server_id": {
+      "type": "string",
+      "description": "ID of the server this message belongs to"
+    },
+    "author_id": {
+      "type": "string",
+      "description": "ID of the user who sent the message"
+    },
+    "author_name": {
+      "type": "string",
+      "description": "Name of the user who sent the message"
+    },
+    "edited": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the message has been edited"
+    },
+    "reply_to": {
+      "type": "string",
+      "description": "ID of the message this is replying to"
+    }
+  },
+  "required": [
+    "content",
+    "channel_id",
+    "server_id",
+    "author_id",
+    "author_name"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Channel",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Channel name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Channel description"
+    },
+    "server_id": {
+      "type": "string",
+      "description": "ID of the server this channel belongs to"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "text",
+        "announcement"
+      ],
+      "default": "text",
+      "description": "Type of channel"
+    },
+    "position": {
+      "type": "number",
+      "default": 0,
+      "description": "Channel position in the list"
+    }
+  },
+  "required": [
+    "name",
+    "server_id"
+  ]
+}

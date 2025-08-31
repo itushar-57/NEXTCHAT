@@ -1,0 +1,47 @@
+{
+  "name": "ServerMember",
+  "type": "object",
+  "properties": {
+    "server_id": {
+      "type": "string",
+      "description": "ID of the server"
+    },
+    "user_id": {
+      "type": "string",
+      "description": "ID of the user"
+    },
+    "user_name": {
+      "type": "string",
+      "description": "Name of the user"
+    },
+    "user_email": {
+      "type": "string",
+      "description": "Email of the user"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "owner",
+        "admin",
+        "member"
+      ],
+      "default": "member",
+      "description": "User role in the server"
+    },
+    "joined_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the user joined the server"
+    },
+    "nickname": {
+      "type": "string",
+      "description": "User's nickname in this server"
+    }
+  },
+  "required": [
+    "server_id",
+    "user_id",
+    "user_name",
+    "user_email"
+  ]
+}
